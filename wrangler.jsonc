@@ -5,7 +5,7 @@
 		{
 			"binding": "DB",
 			"database_name": "did-ucan-preview",
-			"database_id": "03a36e46-bc90-4109-8581-b31719d3dc27",
+			"database_id": "35c2fcf1-7ae4-483a-8254-5d212230b721",
 			"migrations_dir": "drizzle"
 		}
 	],
@@ -15,7 +15,7 @@
 				{
 					"binding": "DB",
 					"database_name": "did-ucan",
-					"database_id": "aa853f2b-3636-4aa4-844e-e6a084f0ac5d",
+					"database_id": "b23afdcf-4098-427c-8c25-eea38a3ceb32",
 					"migrations_dir": "drizzle"
 				}
 			]
