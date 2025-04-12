@@ -67,3 +67,7 @@ export async function fetchUserEmailReset(method: string, payload: ApiPayload = 
 export async function fetchEmailReset(method: string, payload: ApiPayload = {}) {
 	return await fetchApi(method, '/api/emails/reset', payload);
 }
+
+export async function fetchUCAN(method: string, payload: ApiPayload = {}) {
+	return await fetchApi(method, '/api/ucans', payload);
+}
