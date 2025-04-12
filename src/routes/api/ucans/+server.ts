@@ -45,7 +45,7 @@ export const POST: RequestHandler = async ({
 			audience: 'did:key:z' + xPublicKey,
 			capabilities: [
 				emailCapability('create', xPublicKey),
-				emailCapability('update', xPublicKey),
+				emailCapability('read', xPublicKey),
 				emailCapability('delete', xPublicKey)
 			]
 		});
