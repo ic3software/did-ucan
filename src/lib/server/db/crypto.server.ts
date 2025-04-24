@@ -35,7 +35,8 @@ export async function verifySignature(
 		}
 
 		// Finally, verify the timer and payload signatures
-		const publicKeyBytes = uint8arrays.fromString(XPublicKey, 'base58btc');
+		const publicKeyBytesWithPrefix = uint8arrays.fromString(XPublicKey, 'base58btc');
+		const publicKeyBytes = publicKeyBytesWithPrefix.slice(2);
 		const importedKey = await crypto.subtle.importKey('raw', publicKeyBytes, 'Ed25519', false, [
 			'verify'
 		]);

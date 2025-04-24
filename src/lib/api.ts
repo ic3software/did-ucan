@@ -23,6 +23,10 @@ async function fetchApi(method: string, endpoint: string, payload: ApiPayload = 
 	try {
 		await loadKeyPair();
 
+		if (!keypair) {
+			throw new Error('No keypair found');
+		}
+
 		const xTimer = Math.floor(Date.now());
 		const signature = await signRequest(payload, keypair!.privateKey);
 		const xTimerSignature = await signRequest(xTimer, keypair!.privateKey);
