@@ -18,6 +18,21 @@
 			console.error('Error generating UCAN token:', error);
 		}
 	}
+
+	function copyUCANToken() {
+		if (ucanToken) {
+			navigator.clipboard
+				.writeText(ucanToken)
+				.then(() => {
+					console.log('UCAN token copied to clipboard');
+					alert('UCAN token has been copied to clipboard');
+				})
+				.catch((err) => {
+					console.error('Failed to copy UCAN token:', err);
+					alert('Failed to copy UCAN token. Please try again.');
+				});
+		}
+	}
 </script>
 
 <div class="flex min-h-screen items-center justify-center bg-gray-100 dark:bg-gray-900">
@@ -33,6 +48,14 @@
 		</div>
 		<div class="mt-4">
 			<p class="break-words text-gray-900 dark:text-white">Generated UCAN Token: {ucanToken}</p>
+			{#if ucanToken}
+				<button
+					onclick={copyUCANToken}
+					class="mt-2 rounded-md bg-green-500 px-4 py-2 text-white hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-800"
+				>
+					Copy UCAN Token
+				</button>
+			{/if}
 			{#if errorMessage}
 				<p class="text-red-500 dark:text-red-400">{errorMessage}</p>
 			{/if}
