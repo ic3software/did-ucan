@@ -10,6 +10,7 @@ async function generateKey() {
 	const jsonString = JSON.stringify(exported);
 
 	await fs.writeFile('./server_key.json', jsonString);
+	console.log('✅ Server key:', jsonString);
 	console.log('✅ DID:', keypair.did());
 }
 
