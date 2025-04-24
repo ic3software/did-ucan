@@ -40,14 +40,16 @@ export const POST: RequestHandler = async ({
 			);
 		}
 
+		const publicDid = 'did:key:z' + xPublicKey;
+
 		const ucan = await ucans.build({
 			issuer: keypair,
-			audience: xPublicKey,
+			audience: publicDid,
 			lifetimeInSeconds: 60 * 60,
 			capabilities: [
-				emailCapability('create', xPublicKey),
-				emailCapability('read', xPublicKey),
-				emailCapability('delete', xPublicKey)
+				emailCapability('create', publicDid),
+				emailCapability('read', publicDid),
+				emailCapability('delete', publicDid)
 			]
 		});
 
