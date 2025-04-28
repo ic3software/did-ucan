@@ -50,6 +50,7 @@ PRIVATE_SERVER_KEY = private_key1
 ```
 
 We set up `did_key1` here to verify that the top-level UCAN i   ssuer is indeed our `did-ucan` service. This ensures the trustworthiness and integrity of the entire authorization flow.
+
 For the `ucan-authz-service` repository, you need to setup the following variables:
 
 ```bash
