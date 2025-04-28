@@ -58,9 +58,9 @@ PRIVATE_ROOT_ISSUER_DID_KEY = did_key1
 PRIVATE_KEY = private_key2
 ```
 
-## Step 5: Start the did-ucan Services
+## Step 5: Start the did-ucan Service
 
-1. Start the did-ucan services
+1. Start the did-ucan service
 
     ```bash
     cd did-ucan
