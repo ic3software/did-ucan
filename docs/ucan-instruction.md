@@ -45,13 +45,17 @@ cp .env.example .env
 
 For the `did-ucan` repository, you need to setup the following variables:
 
-- PRIVATE_SERVER_KEY = private_key1
+```bash
+PRIVATE_SERVER_KEY = private_key1
+```
 
 We set up `did_key1` here to verify that the top-level UCAN i   ssuer is indeed our `did-ucan` service. This ensures the trustworthiness and integrity of the entire authorization flow.
 For the `ucan-authz-service` repository, you need to setup the following variables:
 
-- PRIVATE_ROOT_ISSUER_DID_KEY = did_key1
-- PRIVATE_KEY = private_key2
+```bash
+PRIVATE_ROOT_ISSUER_DID_KEY = did_key1
+PRIVATE_KEY = private_key2
+```
 
 ## Step 5: Start the did-ucan Services
 
