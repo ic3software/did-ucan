@@ -3,8 +3,9 @@
 ## Prerequisites
 
 Two repositories:
-    - did-ucan
-    - ucan-authz-service
+
+- [did-ucan](https://github.com/ic3software/did-ucan)
+- [ucan-authz-service](https://github.com/ic3software/ucan-authz-service)
 
 ## Step 1: Clone Both Repositories
 
@@ -18,7 +19,9 @@ git clone https://github.com/ic3software/ucan-authz-service.git
 ```bash
 cd did-ucan
 pnpm install
+```
 
+```bash
 cd ucan-authz-service
 npm install
 ```
