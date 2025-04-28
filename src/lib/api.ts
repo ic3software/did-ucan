@@ -23,6 +23,10 @@ async function fetchApi(method: string, endpoint: string, payload: ApiPayload = 
 	try {
 		await loadKeyPair();
 
+		if (!keypair) {
+			throw new Error('No keypair found');
+		}
+
 		const xTimer = Math.floor(Date.now());
 		const signature = await signRequest(payload, keypair!.privateKey);
 		const xTimerSignature = await signRequest(xTimer, keypair!.privateKey);
@@ -66,4 +70,8 @@ export async function fetchUserEmailReset(method: string, payload: ApiPayload = 
 
 export async function fetchEmailReset(method: string, payload: ApiPayload = {}) {
 	return await fetchApi(method, '/api/emails/reset', payload);
+}
+
+export async function fetchUCAN(method: string, payload: ApiPayload = {}) {
+	return await fetchApi(method, '/api/ucans', payload);
 }

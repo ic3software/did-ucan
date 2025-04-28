@@ -15,14 +15,16 @@
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run",
 		"db:generate": "pnpm exec drizzle-kit generate",
-		"db:migrate": "pnpm exec wrangler d1 migrations apply did-auth-preview --local",
-		"db:migrate:preview": "pnpm exec wrangler d1 migrations apply did-auth-preview --remote",
-		"db:migrate:prod": "pnpm exec wrangler d1 migrations apply did-auth --remote --env production"
+		"db:migrate": "pnpm exec wrangler d1 migrations apply did-ucan-preview --local",
+		"db:migrate:preview": "pnpm exec wrangler d1 migrations apply did-ucan-preview --remote",
+		"db:migrate:prod": "pnpm exec wrangler d1 migrations apply did-ucan --remote --env production",
+		"generate-server-keys": "pnpm exec tsx scripts/generate-server-keys.ts"
 	},
 	"dependencies": {
 		"@paralleldrive/cuid2": "^2.2.2",
 		"@sveltejs/adapter-cloudflare": "^5.1.0",
 		"@sveltejs/kit": "^2.20.2",
+		"@ucans/ucans": "^0.12.0",
 		"drizzle-orm": "^0.40.1",
 		"resend": "^4.2.0",
 		"svelte": "^5.25.3",
@@ -55,6 +57,7 @@
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
 		"tailwindcss": "^4.0.0",
+		"tsx": "^4.19.3",
 		"typescript": "^5.0.0",
 		"typescript-eslint": "^8.28.0",
 		"vite": "^6.2.5",

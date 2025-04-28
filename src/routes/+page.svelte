@@ -494,5 +494,12 @@
 				>
 			</div>
 		{/if}
+		<div class="mt-4">
+			<button
+				class="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-800"
+			>
+				<a href="/ucan/generate">Generate UCAN</a>
+			</button>
+		</div>
 	</div>
 </div>
